@@ -12,9 +12,9 @@ const { title, date, excerpt, slug, delay = '' } = Astro.props;
 
 <article class={`blog-card animate-in ${delay}`}>
   <span class="timestamp">{date}</span>
-  <h2><a href={`/${slug}`}>{title}</a></h2>
+  <h2><a href={`/blog/${slug}`}>{title}</a></h2>
   <p>{excerpt}</p>
-  <a href={`/${slug}`} class="read-more">Read Article <span>&rarr;</span></a>
+  <a href={`/blog/${slug}`} class="read-more">Read Article <span>&rarr;</span></a>
 </article>
 
 <style>
