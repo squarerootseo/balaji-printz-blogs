@@ -1,0 +1,73 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Mastering CSS Grid Architectures | Balaji Blogs" description="A deep dive into advanced CSS Grid techniques for building complex, responsive web layouts.">
+  <article class="animate-in">
+    <header class="article-header">
+      <h1>Mastering CSS Grid Architectures</h1>
+      <div class="article-meta">Published on April 18, 2026 &bull; 6 min read</div>
+    </header>
+
+    <div class="article-content">
+      <p>CSS Grid completely revolutionized how developers approach layout on the web. By offering a two-dimensional grid system, it handles complex alignments that would have required multiple wrapper divs and chaotic floats.</p>
+
+      <h2>Thinking in Two Dimensions</h2>
+      <p>Unlike Flexbox, which excels at one-dimensional alignment (either rows or columns), Grid is built for structure. You can define areas like headers, main content, sidebars, and footers with just a few lines of visually intuitive CSS code.</p>
+
+      <h2>The Power of auto-fit</h2>
+      <p>One of the true magic tricks of Grid is the <code>repeat(auto-fit, minmax())</code> function. It enables fully responsive grid layouts without a single media query. As the browser window expands, new columns form automatically based on your defined minimum width constraints.</p>
+
+      <p>Embracing Grid syntax natively means you can start reducing reliance on robust styling frameworks, cutting down bundle sizes while maintaining perfect pixel control over your application UI.</p>
+    </div>
+
+    <a href="/" class="back-link">&larr; Back to all articles</a>
+  </article>
+</Layout>
+
+<style>
+  .article-header {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .article-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .article-meta {
+    color: var(--muted-text);
+    font-size: 0.9rem;
+  }
+
+  .article-content {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 3rem;
+    font-size: 1.1rem;
+    color: var(--muted-text);
+  }
+
+  .article-content p {
+    margin-bottom: 1.5rem;
+  }
+
+  .article-content h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-top: 3rem;
+    color: var(--muted-text);
+    transition: color 0.3s ease;
+  }
+
+  .back-link:hover {
+    color: var(--accent-color);
+  }
+</style>

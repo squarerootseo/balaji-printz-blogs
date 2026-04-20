@@ -1,0 +1,73 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Performance First: Faster Web Apps | Balaji Blogs" description="Strategies and best practices for optimizing web performance and reducing latency.">
+  <article class="animate-in">
+    <header class="article-header">
+      <h1>Performance First: Faster Web Apps</h1>
+      <div class="article-meta">Published on April 15, 2026 &bull; 4 min read</div>
+    </header>
+
+    <div class="article-content">
+      <p>In modern web development, speed is a feature. Users expect pages to load near-instantaneously, and search engines heavily penalize sluggish performance metrics like First Contentful Paint (FCP) and Cumulative Layout Shift (CLS).</p>
+
+      <h2>Asset Optimization</h2>
+      <p>The simplest wins usually lie in resource management. Serving modern image formats like WebP or AVIF, optimizing heavy SVGs, and avoiding massive font payloads can shave whole seconds off a page's loading time.</p>
+
+      <h2>Progressive Enhancement</h2>
+      <p>When handling interactive JavaScript, employing server-side rendering (SSR) or static site generation (SSG) alongside progressive enhancement ensures that vital HTML and CSS are delivered immediately. Heavy client-side logic can hydrate asynchronously later.</p>
+
+      <p>Prioritizing performance is no longer an afterthought; it needs to be baked into your architecture from day one if you want to deliver experiences that retain and convert users.</p>
+    </div>
+
+    <a href="/" class="back-link">&larr; Back to all articles</a>
+  </article>
+</Layout>
+
+<style>
+  .article-header {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .article-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .article-meta {
+    color: var(--muted-text);
+    font-size: 0.9rem;
+  }
+
+  .article-content {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 3rem;
+    font-size: 1.1rem;
+    color: var(--muted-text);
+  }
+
+  .article-content p {
+    margin-bottom: 1.5rem;
+  }
+
+  .article-content h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-top: 3rem;
+    color: var(--muted-text);
+    transition: color 0.3s ease;
+  }
+
+  .back-link:hover {
+    color: var(--accent-color);
+  }
+</style>

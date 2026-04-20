@@ -1,0 +1,70 @@
+---
+import Layout from '../layouts/Layout.astro';
+import BlogCard from '../components/BlogCard.astro';
+
+const posts = [
+  {
+    title: 'The Future of AI in Web Development',
+    date: 'April 20, 2026',
+    excerpt: 'Exploring how artificial intelligence is transforming the way we build, design, and interact with websites in the modern era.',
+    slug: 'future-of-ai-in-web-development',
+  },
+  {
+    title: 'Mastering CSS Grid Architectures',
+    date: 'April 18, 2026',
+    excerpt: 'A deep dive into advanced CSS Grid techniques for building complex, responsive web layouts without relying on heavy frameworks.',
+    slug: 'mastering-css-grid-architectures',
+  },
+  {
+    title: 'Performance First: Faster Web Apps',
+    date: 'April 15, 2026',
+    excerpt: 'Strategies and best practices for optimizing web performance, reducing latency, and delivering lightning-fast user experiences.',
+    slug: 'performance-first-faster-web-apps',
+  },
+];
+---
+
+<Layout title="Balaji Blogs | Insights on Tech and Design">
+  <section class="hero animate-in">
+    <h1>Insights and Perspectives</h1>
+    <p>A fast, lightweight testing environment to showcase web design principles and aesthetics.</p>
+  </section>
+
+  <section class="blog-grid">
+    {posts.map((post, i) => (
+      <BlogCard
+        title={post.title}
+        date={post.date}
+        excerpt={post.excerpt}
+        slug={post.slug}
+        delay={`delay-${i + 1}`}
+      />
+    ))}
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    letter-spacing: -0.05em;
+  }
+
+  .hero p {
+    font-size: 1.25rem;
+    color: var(--muted-text);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+</style>

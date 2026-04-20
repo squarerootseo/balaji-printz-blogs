@@ -1,0 +1,7 @@
+name = "balaji-blog-proxy"
+main = "index.js"
+compatibility_date = "2026-04-20"
+
+# Add this route in your Cloudflare dashboard or via wrangler:
+# Route: balajiprintz.com/blog/*
+# Zone: balajiprintz.com
