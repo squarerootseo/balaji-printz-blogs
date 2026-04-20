@@ -15,7 +15,7 @@ export default {
     if (url.pathname.startsWith('/blog')) {
       // Replace with your actual Cloudflare Pages deployment URL
       const blogUrl = new URL(request.url);
-      blogUrl.hostname = 'balaji-printz-blogs.pages.dev';
+      blogUrl.hostname = 'balaji-printz-blogs.squarerootseo.workers.dev';
 
       const response = await fetch(blogUrl, {
         method: request.method,
