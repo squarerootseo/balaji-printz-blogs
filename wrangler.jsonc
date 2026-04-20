@@ -3,6 +3,13 @@
 	"compatibility_flags": ["global_fetch_strictly_public"],
 	"name": "balaji-printz-blogs",
 	"main": "@astrojs/cloudflare/entrypoints/server",
+	"workers_dev": true,
+	"routes": [
+		{
+			"pattern": "balajiprintz.com/blog/*",
+			"zone_name": "balajiprintz.com"
+		}
+	],
 	"assets": {
 		"directory": "./dist",
 		"binding": "ASSETS"
